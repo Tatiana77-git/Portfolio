@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a tour</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="heading">
+        <h1>Book your tour now!</h1>
+    </div>
+
+
+  
+    <div class="window">
+        <a class="open_modal" href="#open">Сalculate tour</a>
+    </div>
+    
+    
+    
+    <div id="modal" class="modal bounceIn">
+        <div id="close_modal">+</div>
+    
+    <div class="container-window">
+    
+        <div class="container-form">
+    
+            <p class="par-title">Let's find the price of your tour</p>
+            
+            <form>
+            <p class="par"> Choose your destination</p>
+            <select id="country">
+                <option value="600" selecte>Paris</option>
+                <option value="100">Venice</option>
+                <option value="100">Tokyo</option>
+                <option value="400">Iceland</option>
+                <option value="500">Saint-Petersburg</option>
+                <option value="300">Miami Tour</option>
+            </select>
+            
+            <br>
+                
+            <p class="par">Choose your hotel class</p>
+            <select id="hotel">
+                <option value="210" selected>5 stars</option>
+                <option value="160">4 stars</option>
+                <option value="120">3 stars</option>
+                <option value="80">2 stars</option>
+            </select>
+            
+            <br>
+            
+            <p class="par">Food & drinks</p>
+            <select id="food">
+                <option value="30">Only Breakfast</option>
+                <option value="40">Breakfast & Dinner</option>
+                <option value="50" selected>All inclusive</option>
+            </select>
+            
+            <br>
+            
+            <p class="par bottom">How many persons?</p>
+         
+                    <p class="par">Adults
+                    <span>
+                        <input class="modal-text" type="number" id="adult" placeholder="How many adults">
+                    </span>
+                </p>
+            
+                <br>
+
+                    <p class="par">*Children half price
+                    <span>
+                        <input class="modal-text" type="number" id="children" placeholder="How many children">
+                    </span>
+                </p>
+            
+                    <br>
+            
+                    <p class="par">How many days?
+            <select id="days">
+                <option value="21">21 days</option>
+                <option value="14">14 days</option>
+                <option value="10" selected>10 days</option>
+                <option value="7">7 days</option>
+            </select>
+            </p>
+            
+            <br>
+            
+            <div>
+                <input type="checkbox" id="check" value="350">
+                <label for="check" class="label">Additional family health insurance</label>
+            </div>
+            
+                    <br>
+            
+                    <button class="btn-calc">Calculate</button>
+            
+                </form>
+    
+                    <div id="showTotalAmountToPay">
+            
+                        <!-- 1 block -->
+                         <div id="adultPrice">
+                            <p>Total price 
+                            <span>$</span>
+                            <span id="dividedAdult"></span>
+                            <span>per adults</span></p>
+                        </div> 
+            
+                        <!-- 2 block -->
+            
+                        <div id="childrenPrice">
+                           <p>Total price
+                           <span>$</span>
+                           <span id="dividedChildren"></span>
+                           <span>per children</span></p>
+                       </div> 
+            
+                        <!-- 3 block -->
+            
+                        <div id="totalAmount">
+                           <p>Total price 
+                           <span>$</span>
+                           <span id="familyTotal"></span>
+                           <span>per family</span></p>
+                       </div>            
+            
+                    </div>
+ 
+            <div class="reset_btn">
+                <button class="reset">Reset</button>
+             </div>
+            
+            
+             
+            </div>
+            
+    
+    
+    </div>
+
+    </div>
+    
+
+
+    <div class="container">
+        
+        <div class="item one active">
+            <h4>France</h4>
+            <p class="descr">With is spectacular rural scenery, delectable food ans world-class wines, it's not surprise France is such a well-loved holiday destination.</p>
+            <p class="price">from 2000$</p>
+        </div>
+
+        <div class="item two">
+            <h4>Iceland</h4>
+            <p class="descr">The best time to visit Iceland is June throuth August to expirience the beautiful Waterfalls and pleasant weather!</p>
+            <p class="price">from 3000$</p>
+        </div>
+
+        <div class="item three">
+            <h4>Tokyo</h4>
+            <p class="descr">In Japan, cherry blossom season generally takes place in spring between late March and early April.</p>
+            <p class="price">from 3000$</p>
+        </div>
+
+        <div class="item four">
+            <h4>Venice</h4>
+            <p class="descr">Explore the timeless beauty of Venice, Italy! Descover unmissable attractions, local secrets and everything this romantic city has to offer.<p>
+            <p class="price">from 2000$</p>
+        </div>
+
+        <div class="item five">
+            <h4>Miami-Tour</h4>
+            <p class="descr">This is most popular beach in Miami and one of the top beaches in Florida and the #1 Miami attraction.</p>
+            <p class="price">from 3000$</p>
+        </div>
+
+        <div class="item six">
+            <h4>Saint-Petersburg</h4>
+            <p class="descr">It's home to world-famous museums and galleries, a thriving performing arts scene, film festivals, live music, a vibrant literary arts...</p>
+            <p class="price">from 2000$</p>
+        </div>
+
+    </div>
+
+
+
+
+
+    
+</div>
+
+
+  
+
+    <div class="header">
+        <h3>
+            Send us a message!
+        </h3>
+    </div>
+
+        <form
+    action="https://formspree.io/f/xgedabaz"
+    method="POST">
+
+    <input type="hidden" name="_language" value="en" />
+    
+    <div class="header">
+        <label>
+            Your email:
+            <input type="email" class="text-input" name="_replyto" placeholder="Your email..." required="">
+        </label>
+    </div>
+
+    <div class="header">
+        <label>
+            Your message:
+            <textarea name="message" class="text-input" placeholder="Type your message" required=""></textarea>
+        </label>
+    </div>
+
+    <br>
+ 
+
+    <div class="header">
+        <button type="submit" class="btn">Send</button>
+    </div>
+</form>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+
+
+
+body{
+    background-image:url(https://images.unsplash.com/photo-1605436247078-f0ef43ee8d5c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    background-color: black; 
+}
+
+ .container, .header{
+    display: flex;
+    justify-content: center; 
+}  
+
+h1 {
+    font-size: 60px;
+    background: rgb(9, 7, 40);
+    background: linear-gradient(90deg, rgb(34, 24, 211) 0%, rgb(72, 9, 70) 35%, rgba(0,212,255,1) 100%);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;  
+}
+
+.inputField {
+    padding: 10px;
+    width: 40%;
+    border:none;
+
+     
+}
+.btn {
+    padding: 20px;
+    background:  linear-gradient( rgb(23, 18, 109) 0%, rgba(0,212,255,1) 100% ) ;
+    border: none;
+}
+.listInside {
+ 
+    color: #fff;
+    background: rgba(159, 165, 165, 0.5); 
+    list-style-type: none;
+    height: 60px;
+    width: 50%;
+  
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid #cdc7be;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.listCompleted {
+background:  linear-gradient( rgb(32, 27, 122) 0%, rgba(0,212,255,1) 100% ) ;
+color:#000000;
+font-weight: bold;
+text-decoration: line-through;
+transition: all 2s ease;
+}
+
+@media all and (max-width:800px) {
+    h1 {
+        font-size: 40px;
+    }
+}@media all and (max-width:500px) {
+    h1 {
+        font-size: 20px;
+    }
+}

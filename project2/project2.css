@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none; 
+    font-family: 'Poppins', sans-serif;  
+}
+
+.container {
+    max-width: 1300px; 
+    padding: 0;
+    margin: 0;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    background-image:url(https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; 
+    color: white;
+
+}
+
+.home .container {
+    margin: auto 0; 
+}
+
+
+.home .home-content .text-1 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.home .home-content .text-2 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: #114a4e;
+    font-weight: 500;
+}
+
+.typing {
+    position: relative;
+    margin-left: 15px;
+}
+
+.typing::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    width: 1px;
+    height: 40px;
+    border: 1px solid #034c50;
+    animation: blink 0.5s infinite ease;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: #044c4f;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 8px 56px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 25px;
+    border: 2px solid #00adb5;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: #00adb5;
+    background: none;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} 
+
+@media all and (max-width: 850px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .home .container {
+        margin: auto 50px; 
+    }
+    
+
+    .home .home-content .text-1 {
+        font-size: 24px;
+    }
+    
+    .home .home-content .text-2 {
+        font-size: 35px;
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 30px;
+    }
+    
+
+}
+
+
+@media all and (max-width: 500px) {
+    .container {
+        max-width: 500px;
+    }
+
+    .home .container {
+        margin: auto 40px; 
+    }
+    
+
+    .home .home-content .text-1 {
+        font-size: 16px;
+    }
+    
+    .home .home-content .text-2 {
+        font-size: 28px;
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 18px;
+    }
+    
+    .home .home-content a{
+        font-size: 18px;
+        padding: 5px 46px;
+    }
+
+    .typing::after {
+        height: 18px;
+    }
+
+
+}
+
+
+@media all and (max-width: 500px) {
+    .home .home-content .text-3 {
+        font-size: 16px;
+    }
+
+    .typing::after {
+        height: 16px;
+    }
+}
