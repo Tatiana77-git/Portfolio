@@ -24,24 +24,24 @@ city.textContent=`${result.name}, ${result.sys.country}`;
 getOurDate();
 
 let temperature=document.querySelector("#temperature");
-temperature.innerHTML=`${Math.round(result.main.temp)}<spain>°</spain>`;
+temperature.innerHTML=`${Math.round(result.main.temp)}<span>°</span>`;
 
 let feelsLike=document.querySelector("#feelsLike");
-feelsLike.innerHTML=`${Math.round(result.main.feels_like)}<spain>°</spain>`;
+feelsLike.innerHTML=`${Math.round(result.main.feels_like)}<span>°</span>`;
 
 let conditions=document.querySelector("#conditions");
 conditions.innerHTML=`${result.weather[0].main}`;
 
 let varation=document.querySelector("#varation");
-varation.innerHTML="Min: " + `${Math.round(result.main.temp_min)}<spain>°</spain>` + " "+  "Max: " +
-`${Math.round(result.main.temp_max)}<spain>°</spain>`
+varation.innerHTML="Min: " + `${Math.round(result.main.temp_min)}<span>°</span>` + " "+  "Max: " +
+`${Math.round(result.main.temp_max)}<span>°</span>`
 
 
 }
 function getOurDate() {
 const myDate= new Date();
    
-const days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"];
+const days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 let day = days[myDate.getDay()];
