@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ISTALearning</title>
+   <link rel="stylesheet" href="../style.css">
+   <link rel="stylesheet" href="istalearning.css">
+</head>
+<body>
+   <div class="projet">
+      <div class="container">
+
+         <h1 class="projet-header">ISTALearning</h1>
+         <p class="intro">
+            Une plateforme full stack de tests de langues : l'utilisateur choisit un test,
+            crée un compte, paie en ligne et reçoit le lien de son test par e-mail.
+         </p>
+
+         <!-- Chiffres -->
+         <div class="stats">
+            <div class="stat"><span>4</span>langues</div>
+            <div class="stat"><span>6</span>niveaux (A1 – C2)</div>
+            <div class="stat"><span>24</span>tests</div>
+            <div class="stat"><span>9</span>tables PostgreSQL</div>
+            <div class="stat"><span>3</span>services Docker</div>
+         </div>
+
+         <!-- Vidéo -->
+         <video class="demo-video" src="istalearning-demo.mp4" controls muted playsinline></video>
+
+         <!-- Architecture -->
+         <h2 class="section-title">Architecture</h2>
+         <div class="archi">
+            <div class="archi-box">Frontend<small>React · TypeScript</small></div>
+            <div class="archi-arrow">→</div>
+            <div class="archi-box">Backend<small>API REST · Node.js · Express</small></div>
+            <div class="archi-arrow">→</div>
+            <div class="archi-box">Base de données<small>PostgreSQL</small></div>
+         </div>
+         <p class="archi-note">Services externes : Stripe (paiement) · Resend (e-mails)</p>
+
+         <!-- Parcours -->
+         <h2 class="section-title">Parcours utilisateur</h2>
+         <ol class="parcours">
+            <li>Choix de la langue et du niveau dans le catalogue</li>
+            <li>Page détaillée du test avec sa description</li>
+            <li>Inscription ou connexion</li>
+            <li>Paiement sécurisé avec Stripe</li>
+            <li>E-mail automatique avec le lien vers le test acheté</li>
+            <li>Historique des achats dans l'espace client</li>
+         </ol>
+
+         <!-- Détails techniques -->
+         <div class="details">
+            <div class="detail-card">
+               <h3>Frontend</h3>
+               <ul>
+                  <li>React et TypeScript avec Vite</li>
+                  <li>React Router : catalogue par langue, page de chaque test</li>
+                  <li>Requêtes avec <code>fetch</code> et cookie de session (<code>credentials: "include"</code>)</li>
+                  <li>Menu adapté selon le rôle : visiteur, client ou administrateur</li>
+                  <li>Inscription, connexion, « Mot de passe oublié »</li>
+                  <li>Espace client avec l'historique des achats</li>
+                  <li>Bandeau de consentement aux cookies</li>
+                  <li>Tests avec Vitest et Testing Library</li>
+               </ul>
+            </div>
+
+            <div class="detail-card">
+               <h3>Backend</h3>
+               <ul>
+                  <li>API REST en Node.js, Express et TypeScript</li>
+                  <li>Architecture en couches : routes → middlewares → controllers → models</li>
+                  <li>JWT stocké dans un cookie, avec une table de tokens pour une vraie déconnexion</li>
+                  <li>Middleware d'authentification (401) et middleware administrateur (403)</li>
+                  <li>Réinitialisation du mot de passe avec un token temporaire valable 1 heure</li>
+                  <li>Paiement Stripe et e-mail automatique avec Resend</li>
+                  <li>Tests unitaires des middlewares et du service de tokens</li>
+               </ul>
+            </div>
+
+            <div class="detail-card">
+               <h3>Base de données</h3>
+               <ul>
+                  <li>PostgreSQL, 9 tables : clients, produits, achats, paiements, résultats, tokens, historique…</li>
+                  <li>Relation plusieurs-à-plusieurs entre achats et produits</li>
+                  <li>Table de statuts commune aux achats, paiements et résultats</li>
+                  <li>Schéma et données créés automatiquement par des scripts SQL au premier lancement</li>
+               </ul>
+            </div>
+
+            <div class="detail-card">
+            <h3>Docker et déploiement</h3>
+               <ul>
+                  <li>Docker Compose : frontend, backend et base de données</li>
+                  <li>Volume Docker pour garder les données</li>
+                  <li>GitHub Actions : tests et build à chaque push</li>
+                  <li>Déploiement sur un serveur VPS (OVH)</li>
+               </ul>
+            </div>
+         </div>
+
+         <!-- Défis -->
+         <h2 class="section-title">Ce que j'ai appris</h2>
+         <ul class="defis">
+            <li><strong>Relier frontend et backend avec des cookies :</strong> configurer CORS et les requêtes pour que la session fonctionne entre deux ports.</li>
+            <li><strong>Garder la base et le code synchronisés :</strong> versionner le schéma et les données pour que le projet démarre sur n'importe quel ordinateur.</li>
+            <li><strong>Déployer une application complète :</strong> lancer les trois services avec Docker sur un serveur distant.</li>
+         </ul>
+
+         <p class="techno">
+            React · TypeScript · Node.js · Express · PostgreSQL · Stripe · Docker · GitHub Actions
+         </p>
+
+         <div class="buttons">
+            <a href="../index.html" class="projet-btn-back">Retour au portfolio</a>
+            <a href="mailto:tanya.dor1@gmail.com?subject=ISTALearning" class="projet-btn-back">Code sur demande</a>
+         </div>
+
+      </div>
+   </div>
+</body>
+</html>
